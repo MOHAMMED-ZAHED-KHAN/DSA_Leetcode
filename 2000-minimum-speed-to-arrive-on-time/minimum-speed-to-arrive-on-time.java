@@ -19,7 +19,8 @@ class Solution {
     public boolean minspeed(int[] dist , int mid , double hour){
         double totalh=0;
         for(int i=0;i<dist.length-1;i++){
-            totalh+=Math.ceil((double) dist[i] / mid);
+            totalh+=(dist[i]+mid-1)/mid;
+            // totalh+=Math.ceil((double) dist[i] / mid);
         }
         totalh+=(double)dist[dist.length-1]/mid;
         return totalh<=hour;
