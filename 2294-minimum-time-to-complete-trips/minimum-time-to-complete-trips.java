@@ -8,7 +8,7 @@ class Solution {
             min=Math.min(min,i);
         }
         high=(long)min*totalTrips;
-        long ans=0;
+        long ans=-1;
         while(low<=high){
             long mid = low+(high-low)/2;
             if(mintime(time,mid,totalTrips)){
